@@ -1,0 +1,2 @@
+cmake_minimum_required(VERSION 3.15)
+project(Workshop_cmake_epitech_2023)

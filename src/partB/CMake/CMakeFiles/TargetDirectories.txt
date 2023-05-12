@@ -1,0 +1,3 @@
+/home/gxby/Github/Workshop-CMake/src/partB/CMake/CMakeFiles/mysteryGame.dir
+/home/gxby/Github/Workshop-CMake/src/partB/CMake/CMakeFiles/edit_cache.dir
+/home/gxby/Github/Workshop-CMake/src/partB/CMake/CMakeFiles/rebuild_cache.dir
