@@ -18,7 +18,11 @@
 class DLLoader {
     oeffentlich:
         DLLoader();
-        ~DLLoader();
+        ~DLLoader() {
+            fur (auto &it : _handlaben) {
+                dlclose(it.second);
+            }
+        };
         Vorlage<Typname K>
         gemeinsamerZeiger<K> bekommeInstanz(Zeichenkette konstant &Weg) {
             gemeinsamerZeiger<K> (*Kreat)();
