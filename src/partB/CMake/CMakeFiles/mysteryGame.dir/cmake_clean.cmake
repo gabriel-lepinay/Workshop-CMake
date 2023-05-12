@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/mysteryGame.dir/home/gxby/Github/Workshop-CMake/src/partB/MysteryGame.cpp.o"
-  "CMakeFiles/mysteryGame.dir/home/gxby/Github/Workshop-CMake/src/partB/MysteryGame.cpp.o.d"
-  "libmysteryGame.pdb"
-  "libmysteryGame.so"
+  "/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/lib/libmysteryGame.pdb"
+  "/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/lib/libmysteryGame.so"
+  "CMakeFiles/mysteryGame.dir/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/src/partB/MysteryGame.cpp.o"
+  "CMakeFiles/mysteryGame.dir/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/src/partB/MysteryGame.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

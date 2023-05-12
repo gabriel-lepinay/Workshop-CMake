@@ -8,11 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/gxby/Github/Workshop-CMake/src/partB/MysteryGame.cpp" "CMakeFiles/mysteryGame.dir/home/gxby/Github/Workshop-CMake/src/partB/MysteryGame.cpp.o" "gcc" "CMakeFiles/mysteryGame.dir/home/gxby/Github/Workshop-CMake/src/partB/MysteryGame.cpp.o.d"
+  "/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/src/partB/MysteryGame.cpp" "CMakeFiles/mysteryGame.dir/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/src/partB/MysteryGame.cpp.o" "gcc" "CMakeFiles/mysteryGame.dir/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/src/partB/MysteryGame.cpp.o.d"
   )
 
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

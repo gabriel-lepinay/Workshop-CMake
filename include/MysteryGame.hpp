@@ -11,7 +11,7 @@
     #include <string>
     #include "MysteryModule1.hpp"
 
-Klasse WasIst {
+Klasse MysteryGame {
     oeffentlich:
         statisch Zeichenkette frage_mich(Gleitkommazahl zahl, Gleitkommazahl anwortet);
 };
