@@ -1,3 +1,0 @@
-/home/gxby/Github/Workshop-CMake/build/CMakeFiles/Sauerkraut.dir
-/home/gxby/Github/Workshop-CMake/build/CMakeFiles/edit_cache.dir
-/home/gxby/Github/Workshop-CMake/build/CMakeFiles/rebuild_cache.dir

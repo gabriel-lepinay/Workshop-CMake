@@ -24,7 +24,7 @@ Core::Core() : _current_number(0.0)
 bool Core::run()
 {
     std::cout << "Try to find the right number." << std::endl;
-    std::shared_ptr<MysteryGame> plugin = std::shared_ptr<MysteryGame>(_loader.bekommeInstanz<MysteryGame>("./lib/libMysteryModule1.so"));
+    std::shared_ptr<IMysteryGame> plugin = std::shared_ptr<IMysteryGame>(_loader.bekommeInstanz<IMysteryGame>("./lib/libMysteryModule1.so"));
 
     while (_current_number != _number) {
         std::cout << "> ";

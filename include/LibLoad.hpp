@@ -17,7 +17,6 @@
 
 class DLLoader {
     oeffentlich:
-        DLLoader();
         ~DLLoader() {
             fur (auto &it : _handlaben) {
                 dlclose(it.second);
@@ -43,10 +42,10 @@ class DLLoader {
             Kreat = (K*(*)())dlsym(handlaben, "Kreat");
             if (!Kreat) {
                 std::cerr << dlerror() << std::endl;
-                return Nullzeiger;
+                gib_zurueck Nullzeiger;
             }
             instanz = Kreat();
-            return instanz;
+            gib_zurueck instanz;
         }
 
     privat:
