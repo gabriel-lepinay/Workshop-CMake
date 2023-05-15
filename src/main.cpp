@@ -9,20 +9,23 @@
 
 bool errorHandlingt(int ac, char **av)
 {
-    if (ac != 2)
+    if (ac != 1 and av[1][0] == '-' and av[1][1] == 'h') {
+        std::cout << "Usage: ./mystery <difficulty>\n\tdifficulty:\n\t\t0 < difficulty < 4" << std::endl;
         return false;
-    if (av[1][0] == '-' && av[1][1] == 'h')
-        std::cout << "Usage: ./mystery [difficulty]\n\tdifficulty: int 0 < difficulty < 4" << std::endl;
+    }
+    if (ac != 1) {
+        std::cout << "Wrong number of arguments. Try ./mystery -h" << std::endl;
         return false;
-    if (std::stoi(av[1]) < 1 || std::stoi(av[1]) > 3)
-        return false;
+    }
     return true;
 }
 
 int main(int ac, char **av)
 {
-    if (!errorHandlingt(ac, av))
+    if (!errorHandlingt(ac, av)) {
         return (84);
-    Core core(av[1]);
+    }
+    Core core;
+    core.run();
     return (0);
 }

@@ -7,30 +7,37 @@
 
 #include "Core.hpp"
 #include <iostream>
-// Difficulty is a number between 1 and 3
-// 1 is easy, 2 is medium, 3 is hard
-// The difficulty define your number of life
-// 1 = 5 life, 2 = 4 life, 3 = 3 life
+#include <cstdlib>
+#include <math.h>
+#include "LibLoad.hpp"
+#include <memory>
+#include "MysteryGame.hpp"
 
-Core::Core(char *difficulty) : _current_number(0.0)
+Core::Core() : _current_number(0.0)
 {
-    _difficulty = std::stoi(difficulty);
-    _error = 4 - (_difficulty - 2);
-}
-
-Core::~Core()
-{
+    srand(time(NULL));
+    float number = static_cast<float> (rand()) / (static_cast <float> (RAND_MAX/100));
+    _number = floorf(number * 100) / 100;
+    std::cout << "Number: " << _number << std::endl;
 }
 
 bool Core::run()
 {
-    std::cout << "Try to find the write number" << std::endl;
-    while (_error > 0 and _current_number != _number) {
+    std::cout << "Try to find the right number." << std::endl;
+    std::shared_ptr<MysteryGame> plugin = std::shared_ptr<MysteryGame>(_loader.bekommeInstanz<MysteryGame>("./lib/libMysteryModule1.so"));
+
+    while (_current_number != _number) {
+        std::cout << "> ";
         std::cin >> _current_number;
+
         if (_current_number == _number) {
             std::cout << "Good job !" << std::endl;
         } else {
-            std::cout << "Nope !" << std::endl;
+            if (plugin == nullptr)
+                std::cout << "Nope !" << std::endl;
+            else
+                plugin->frage_mich(_current_number, _number);
         }
     }
+    return true;
 }

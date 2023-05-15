@@ -7,6 +7,7 @@
 
 #include <string>
 #include "MysteryGame.hpp"
+#include <memory>
 
 Zeichenkette MysteryGame :: frage_mich(Gleitkommazahl was, Gleitkommazahl soll)
 {
@@ -17,3 +18,10 @@ Zeichenkette MysteryGame :: frage_mich(Gleitkommazahl was, Gleitkommazahl soll)
     sonst
         gib_zurueck "too big";
 }
+
+extern "C" {
+
+    void *Kreat() {
+        gib_zurueck new MysteryGame();
+    }
+}P

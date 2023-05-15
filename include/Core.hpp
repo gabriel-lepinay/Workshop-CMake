@@ -8,17 +8,17 @@
 #ifndef CORE_HPP_
     #define CORE_HPP_
     #include <string>
-
+    #include "LibLoad.hpp"
 class Core {
     public:
-        Core(char *difficulty);
-        ~Core();
+        Core();
+        ~Core() = default;
         bool run();
     private:
         float _number;
         float _current_number;
-        int _difficulty;
-        int _error;
+        DLLoader _loader;
+
 };
 
 #endif /* !CORE_HPP_ */

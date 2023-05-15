@@ -24,23 +24,23 @@ class DLLoader {
             }
         };
         Vorlage<Typname K>
-        gemeinsamerZeiger<K> bekommeInstanz(Zeichenkette konstant &Weg) {
-            gemeinsamerZeiger<K> (*Kreat)();
-            gemeinsamerZeiger<K> instanz;
+        K* bekommeInstanz(Zeichenkette konstant &Weg) {
+            K* (*Kreat)();
+            K* instanz;
             Leere *handlaben = Nullzeiger;
 
-            wenn (_handles.find(Weg) ist_nicht _handles.end()) {
-                handlaben = _handlabens[Weg];
+            wenn (_handlaben.find(Weg) ist_nicht _handlaben.end()) {
+                handlaben = _handlaben[Weg];
             } sonst {
                 handlaben = dlopen(Weg.c_str(), RTLD_LAZY);
-                _handlabens[Weg] = handlaben;
+                _handlaben[Weg] = handlaben;
             }
 
             wenn (nicht handlaben) {
                 std::cerr << dlerror() << std::endl;
                 return Nullzeiger;
             }
-            Kreat = (gemeinsamerZeiger<K> (*)())dlsym(handlaben, "Kreat");
+            Kreat = (K*(*)())dlsym(handlaben, "Kreat");
             if (!Kreat) {
                 std::cerr << dlerror() << std::endl;
                 return Nullzeiger;
