@@ -8,8 +8,9 @@
 #include <string>
 #include "MysteryGame.hpp"
 #include <memory>
+#include <iostream>
 
-Zeichenkette MysteryGame :: frage_mich(Gleitkommazahl was, Gleitkommazahl soll)
+Zeichenkette MysteryGame::frage_mich(Ganzzahl was, Ganzzahl soll)
 {
     wenn (was ist soll)
         gib_zurueck Zeichenkette("yes!");

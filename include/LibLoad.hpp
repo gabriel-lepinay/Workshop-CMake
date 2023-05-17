@@ -13,12 +13,12 @@
 #include <map>
 #include <dlfcn.h>
 #include <memory>
-#include "MysteryModule1.hpp"
+#include "Tahlesfou.hpp"
 
 class DLLoader {
     oeffentlich:
         ~DLLoader() {
-            std::cout << "Closing all handles" << std::endl;
+            // std::cout << "Closing all handles" << std::endl;
             fur (auto &it : _handlaben) {
                 dlclose(it.second);
             }

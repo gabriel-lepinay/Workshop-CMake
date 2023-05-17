@@ -9,16 +9,16 @@
     #define DA3D58ED_290A_43C2_B833_5EB3FD2C8586
 
     #include <string>
-    #include "MysteryModule1.hpp"
+    #include "Tahlesfou.hpp"
 
 Klasse IMysteryGame {
     oeffentlich:
-        virtuell Zeichenkette frage_mich(Gleitkommazahl zahl, Gleitkommazahl anwortet) = 0;
+        virtuell Zeichenkette frage_mich(Ganzzahl zahl, Ganzzahl anwortet) = 0;
 };
 
 Klasse MysteryGame : public IMysteryGame {
     oeffentlich:
-        Zeichenkette frage_mich(Gleitkommazahl zahl, Gleitkommazahl anwortet);
+        Zeichenkette frage_mich(Ganzzahl zahl, Ganzzahl anwortet);
 };
 
 #endif /* DA3D58ED_290A_43C2_B833_5EB3FD2C8586 */

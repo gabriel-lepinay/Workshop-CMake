@@ -17,15 +17,13 @@
 Core::Core() : _current_number(0.0)
 {
     srand(time(NULL));
-    _number = rand() % 100;
-    std::cout << "Number: " << _number << std::endl;
+    _number = rand() % 1000;
 }
 
 bool Core::run()
 {
-    std::cout << "Try to find the right number." << std::endl;
-    std::cout << "debug" << std::endl;
-    std::shared_ptr<IMysteryGame> plugin = std::shared_ptr<IMysteryGame>(_loader.bekommeInstanz<IMysteryGame>("../lib/libmysteryGame.so"));
+    std::cout << "Here is your first mission, try to find the right number.\n\t You can exit by typing 'exit'" << std::endl;
+    std::shared_ptr<IMysteryGame> plugin = std::shared_ptr<IMysteryGame>(_loader.bekommeInstanz<IMysteryGame>("./lib/libHack.so"));
 
     while (_current_number != _number) {
         std::cout << "> ";
@@ -36,13 +34,12 @@ bool Core::run()
         if (!isValidInput())
             continue;
         if (_current_number == _number) {
-            std::cout << "Good job !" << std::endl;
+            std::cout << "Congrats you passed the test!" << std::endl;
         } else {
             if (plugin == nullptr)
-                std::cout << "Nope !" << std::endl;
+                std::cout << "Errrr!" << std::endl;
             else {
-                std::cout << plugin.get() << std::endl;
-                plugin->frage_mich(_current_number, _number);
+                std::cout << plugin->frage_mich(_current_number, _number) << std::endl;
             }
         }
     }
@@ -52,7 +49,7 @@ bool Core::run()
 bool Core::isValidInput()
 {
     try {
-        std::stoi(_input);
+        _current_number = std::stoi(_input);
     } catch (std::invalid_argument &e) {
         std::cout << "Ungültige Eingabe!" << std::endl;
         return false;
