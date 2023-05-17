@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Sauerkraut.dir/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/src/Core.cpp.o"
-  "CMakeFiles/Sauerkraut.dir/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/src/Core.cpp.o.d"
-  "CMakeFiles/Sauerkraut.dir/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/src/main.cpp.o"
-  "CMakeFiles/Sauerkraut.dir/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/src/main.cpp.o.d"
+  "CMakeFiles/Sauerkraut.dir/home/gxby/Github/Workshop-CMake/src/Core.cpp.o"
+  "CMakeFiles/Sauerkraut.dir/home/gxby/Github/Workshop-CMake/src/Core.cpp.o.d"
+  "CMakeFiles/Sauerkraut.dir/home/gxby/Github/Workshop-CMake/src/main.cpp.o"
+  "CMakeFiles/Sauerkraut.dir/home/gxby/Github/Workshop-CMake/src/main.cpp.o.d"
   "Sauerkraut"
   "Sauerkraut.pdb"
 )

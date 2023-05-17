@@ -1,4 +1,4 @@
-# Install script for directory: /home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/build
+# Install script for directory: /home/gxby/Github/Workshop-CMake/build
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/gxby/Github/Workshop-CMake/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

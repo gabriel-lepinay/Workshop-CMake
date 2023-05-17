@@ -83,7 +83,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/build"
+			"value" : "/home/gxby/Github/Workshop-CMake/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -107,7 +107,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "25"
+			"value" : "26"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -119,7 +119,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "2"
+			"value" : "3"
 		},
 		{
 			"name" : "CMAKE_COLOR_MAKEFILE",
@@ -591,7 +591,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/build/CMakeFiles/pkgRedirects"
+			"value" : "/home/gxby/Github/Workshop-CMake/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -651,7 +651,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/build"
+			"value" : "/home/gxby/Github/Workshop-CMake/build"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1399,7 +1399,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "brobert"
+			"value" : "pc-gaby"
 		},
 		{
 			"name" : "SVNCOMMAND",
@@ -1427,7 +1427,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/build"
+			"value" : "/home/gxby/Github/Workshop-CMake/build"
 		},
 		{
 			"name" : "Workshop_cmake_epitech_2023_IS_TOP_LEVEL",
@@ -1451,7 +1451,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/build"
+			"value" : "/home/gxby/Github/Workshop-CMake/build"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

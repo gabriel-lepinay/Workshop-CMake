@@ -55,22 +55,22 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"backtrace" : 2,
-					"fragment" : "-g3"
+					"fragment" : "-std=gnu++17"
 				},
 				{
-					"fragment" : "-std=gnu++17"
+					"backtrace" : 2,
+					"fragment" : "-g3"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/build/../include"
+					"path" : "/home/gxby/Github/Workshop-CMake/build/../include"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/build/../enthalten"
+					"path" : "/home/gxby/Github/Workshop-CMake/build/../enthalten"
 				}
 			],
 			"language" : "CXX",
@@ -124,13 +124,13 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/src/main.cpp",
+			"path" : "/home/gxby/Github/Workshop-CMake/src/main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/src/Core.cpp",
+			"path" : "/home/gxby/Github/Workshop-CMake/src/Core.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

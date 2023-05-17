@@ -5,7 +5,7 @@
 			"path" : "CMakeLists.txt"
 		},
 		{
-			"path" : "CMakeFiles/3.25.2/CMakeSystem.cmake"
+			"path" : "CMakeFiles/3.26.3/CMakeSystem.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -13,10 +13,10 @@
 			"path" : "/usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake"
 		},
 		{
-			"path" : "CMakeFiles/3.25.2/CMakeCCompiler.cmake"
+			"path" : "CMakeFiles/3.26.3/CMakeCCompiler.cmake"
 		},
 		{
-			"path" : "CMakeFiles/3.25.2/CMakeCXXCompiler.cmake"
+			"path" : "CMakeFiles/3.26.3/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -142,8 +142,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/build",
-		"source" : "/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/build"
+		"build" : "/home/gxby/Github/Workshop-CMake/build",
+		"source" : "/home/gxby/Github/Workshop-CMake/build"
 	},
 	"version" : 
 	{
