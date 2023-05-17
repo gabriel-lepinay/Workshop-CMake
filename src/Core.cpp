@@ -12,12 +12,12 @@
 #include "LibLoad.hpp"
 #include <memory>
 #include "MysteryGame.hpp"
+#include <string>
 
 Core::Core() : _current_number(0.0)
 {
     srand(time(NULL));
-    float number = static_cast<float> (rand()) / (static_cast <float> (RAND_MAX/100));
-    _number = floorf(number * 100) / 100;
+    _number = rand() % 100;
     std::cout << "Number: " << _number << std::endl;
 }
 
@@ -29,8 +29,12 @@ bool Core::run()
 
     while (_current_number != _number) {
         std::cout << "> ";
-        std::cin >> _current_number;
+        std::cin >> _input;
 
+        if (!_input.compare("exit"))
+            return true;
+        if (!isValidInput())
+            continue;
         if (_current_number == _number) {
             std::cout << "Good job !" << std::endl;
         } else {
@@ -41,6 +45,17 @@ bool Core::run()
                 plugin->frage_mich(_current_number, _number);
             }
         }
+    }
+    return true;
+}
+
+bool Core::isValidInput()
+{
+    try {
+        std::stoi(_input);
+    } catch (std::invalid_argument &e) {
+        std::cout << "Ungültige Eingabe!" << std::endl;
+        return false;
     }
     return true;
 }

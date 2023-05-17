@@ -15,8 +15,11 @@ class Core {
         ~Core() = default;
         bool run();
     private:
+        bool isValidInput();
+
         float _number;
         float _current_number;
+        std::string _input;
         DLLoader _loader;
 
 };
