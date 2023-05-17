@@ -12,6 +12,8 @@ set(SOURCES
     ../src/Core.cpp
 )
 
+add_compile_options(-g3)
+
 add_executable(Sauerkraut ${SOURCES})
 
 add_executable(

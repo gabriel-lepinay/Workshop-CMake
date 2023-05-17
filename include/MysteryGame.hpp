@@ -16,7 +16,7 @@ Klasse IMysteryGame {
         virtuell Zeichenkette frage_mich(Gleitkommazahl zahl, Gleitkommazahl anwortet) = 0;
 };
 
-Klasse MysteryGame {
+Klasse MysteryGame : public IMysteryGame {
     oeffentlich:
         Zeichenkette frage_mich(Gleitkommazahl zahl, Gleitkommazahl anwortet);
 };

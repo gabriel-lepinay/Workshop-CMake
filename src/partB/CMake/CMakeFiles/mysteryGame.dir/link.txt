@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -shared -Wl,-soname,libmysteryGame.so -o /home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/lib/libmysteryGame.so "CMakeFiles/mysteryGame.dir/home/Amour/Documents/Epitech/Tech2/hub/workshop-cmake/src/partB/MysteryGame.cpp.o" 

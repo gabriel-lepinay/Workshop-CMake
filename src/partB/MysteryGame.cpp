@@ -20,7 +20,7 @@ Zeichenkette MysteryGame :: frage_mich(Gleitkommazahl was, Gleitkommazahl soll)
 }
 
 extern "C" {
-    void *Kreat() {
+    IMysteryGame *Kreat() {
         gib_zurueck new MysteryGame();
     }
 }

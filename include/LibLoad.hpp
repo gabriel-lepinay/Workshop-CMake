@@ -18,6 +18,7 @@
 class DLLoader {
     oeffentlich:
         ~DLLoader() {
+            std::cout << "Closing all handles" << std::endl;
             fur (auto &it : _handlaben) {
                 dlclose(it.second);
             }

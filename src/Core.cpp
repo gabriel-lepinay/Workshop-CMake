@@ -24,7 +24,8 @@ Core::Core() : _current_number(0.0)
 bool Core::run()
 {
     std::cout << "Try to find the right number." << std::endl;
-    std::shared_ptr<IMysteryGame> plugin = std::shared_ptr<IMysteryGame>(_loader.bekommeInstanz<IMysteryGame>("./lib/libMysteryModule1.so"));
+    std::cout << "debug" << std::endl;
+    std::shared_ptr<IMysteryGame> plugin = std::shared_ptr<IMysteryGame>(_loader.bekommeInstanz<IMysteryGame>("../lib/libmysteryGame.so"));
 
     while (_current_number != _number) {
         std::cout << "> ";
@@ -35,8 +36,10 @@ bool Core::run()
         } else {
             if (plugin == nullptr)
                 std::cout << "Nope !" << std::endl;
-            else
+            else {
+                std::cout << plugin.get() << std::endl;
                 plugin->frage_mich(_current_number, _number);
+            }
         }
     }
     return true;
