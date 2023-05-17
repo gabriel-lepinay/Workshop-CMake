@@ -17,6 +17,7 @@
 #define falsch false
 
 #define gib_zurueck return
+#define weiter continue
 
 #define Komma ,
 #define Punkt .
@@ -80,5 +81,8 @@
 #define Vektor std::vector
 #define Liste std::list
 #define Karte std::map
+
+#define versuche try
+#define fange catch
 
 #define Nullzeiger nullptr

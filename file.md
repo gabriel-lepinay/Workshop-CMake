@@ -7,11 +7,11 @@ taking into consideration the build environnement specificities, thus making
 cmake crossplateform.
 
 CMake has several advantages over Makefiles:
- - it provides a higher level of abstraction, making it easier to use and shorter
+ - It provides a higher level of abstraction, making it easier to use and shorter
 than Makefiles.
- - it is much easier to deal with complex situations using CMake than it is than
+ - It is much easier to deal with complex situations using CMake than it is than
 using Makefiles.
- - the generated Makefiles automatically choose between the make and make re rule,
+ - The generated Makefiles automatically choose between the make and make re rule,
 avoiding you headaches when you forget to make re after changing a header file.
 
 CMake does have one inconvenient though, and it is that it generates a lot of files
@@ -21,21 +21,25 @@ your CMake instructions within a subdirectory of your project.
 ## Your first steps
 
 This workshop will guide you through the compilation of a wonderful mystery game
-program. First, take a look at the build/ folder located at the root of the repository.
-Within this folder is a file named CMakeLists.txt. This is the heart of CMake, and
-where you will be writting you CMake code. Within this file are already defined
-the source files for the first part. Your goal is to compile an executable using the sources defined on top of the file, and get this executable to end up at the
-root of the repository.
+program in 3 parts.
 
-WARNING: this project demands you to compile it using the math library. (-lm)
+First, take a look at the ./src/ folder located at the root of the repository.
+Within this folder you can find the 3 parts of this workshop.
+In each part you can find a file named CMakeLists.txt. This is the heart of CMake, and
+where you will be writting you CMake code.
 
-## This is not very modular
 
-What about if you need to use your code somewhere else? Change the CMakeLists.txt
-so that you compile the source into a library (.a file), without the main.cpp.
-The library should be outputed into the lib/ directory at the root of the repository.
-Then compile the executable using the main.cpp and the library that you just created.
+## Your mission start here
+Okay buddy we found some weird code (cf. ./src/code) and we need you to compile it.
 
+We give you a CMakeLists.txt file in ./src/part1 to help you in your mission.
+
+We need you to compile it with the .h files in the ./include folder and locate the output to the root.
+
+As you see your first binary using CMake was created. We found this weird code (cf. src/code)
+
+
+Hint: Take a look to `set`, `include_directories` and `add_executable`.
 ## This is a very bad game
 
 This game is quite bad as of know. Lets add a bit more fun by adding another library.

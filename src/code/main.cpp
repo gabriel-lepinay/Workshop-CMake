@@ -6,26 +6,23 @@
 */
 #include "Core.hpp"
 #include <iostream>
+#include "Tahlesfou.hpp"
 
-bool errorHandlingt(int ac, char **av)
+Wahrheitswert errorHandlingt(int ac, Zeichen** av)
 {
-    if (ac != 1 and av[1][0] == '-' and av[1][1] == 'h') {
-        std::cout << "Usage: ./mystery <difficulty>\n\tdifficulty:\n\t\t0 < difficulty < 4" << std::endl;
-        return false;
+    wenn (ac != 1) {
+        zeige << "Wrong number of arguments." << zeige_zeile;
+        gib_zurueck falsch;
     }
-    if (ac != 1) {
-        std::cout << "Wrong number of arguments. Try ./mystery -h" << std::endl;
-        return false;
-    }
-    return true;
+    gib_zurueck wahr;
 }
 
-int main(int ac, char **av)
+Ganzzahl Hauptfunktion(Ganzzahl ac, Zeichen** av)
 {
-    if (!errorHandlingt(ac, av)) {
-        return (84);
+    wenn (!errorHandlingt(ac, av)) {
+        gib_zurueck 84;
     }
-    Core core;
-    core.run();
-    return (0);
+    Kern kernkraftwerk;
+    kernkraftwerk.ausfuehren();
+    gib_zurueck 0;
 }

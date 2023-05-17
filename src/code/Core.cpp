@@ -13,46 +13,47 @@
 #include <memory>
 #include "MysteryGame.hpp"
 #include <string>
+#include "Tahlesfou.hpp"
 
-Core::Core() : _current_number(0.0)
+Wahrheitswert Kern::istGueltigeEingabe()
 {
-    srand(time(NULL));
-    _number = rand() % 1000;
+    versuche {
+        _aktuelle_nummer = stoi(_eingabe);
+    } fange (std::invalid_argument &e) {
+        zeige << "Ungültige Eingabe!" << zeige_zeile;
+        gib_zurueck falsch;
+    }
+    gib_zurueck wahr;
 }
 
-bool Core::run()
+Kern::Kern() : _aktuelle_nummer(0.0)
 {
-    std::cout << "Here is your first mission, try to find the right number.\n\t You can exit by typing 'exit'" << std::endl;
-    std::shared_ptr<IMysteryGame> plugin = std::shared_ptr<IMysteryGame>(_loader.bekommeInstanz<IMysteryGame>("./lib/libHack.so"));
+    srand(time(Nullzeiger));
+    _nummer = rand() % 1000;
+}
 
-    while (_current_number != _number) {
-        std::cout << "> ";
-        std::cin >> _input;
+Wahrheitswert Kern::ausfuehren()
+{
+    zeige << "Here is your first mission, try to find the right number.\n\t You can exit by typing 'exit'" << zeige_zeile;
+    gemeinsamerZeiger<IMysteryGame> plugin = gemeinsamerZeiger<IMysteryGame>(_lader.bekommeInstanz<IMysteryGame>("./lib/libHack.so"));
 
-        if (!_input.compare("exit"))
-            return true;
-        if (!isValidInput())
-            continue;
-        if (_current_number == _number) {
-            std::cout << "Congrats you passed the test!" << std::endl;
-        } else {
-            if (plugin == nullptr)
-                std::cout << "Errrr!" << std::endl;
-            else {
-                std::cout << plugin->frage_mich(_current_number, _number) << std::endl;
+    solange (_aktuelle_nummer != _nummer) {
+        zeige << "> ";
+        gib_ein >> _eingabe;
+
+        wenn (!_eingabe.compare("exit"))
+            gib_zurueck wahr;
+        wenn (!istGueltigeEingabe())
+            weiter;
+        wenn (_aktuelle_nummer == _nummer) {
+            zeige << "Congrats you passed the test!" << zeige_zeile;
+        } sonst {
+            wenn (plugin == Nullzeiger)
+                zeige << "Errrr!" << zeige_zeile;
+            sonst {
+                zeige << plugin->frage_mich(_aktuelle_nummer, _nummer) << zeige_zeile;
             }
         }
     }
-    return true;
-}
-
-bool Core::isValidInput()
-{
-    try {
-        _current_number = std::stoi(_input);
-    } catch (std::invalid_argument &e) {
-        std::cout << "Ungültige Eingabe!" << std::endl;
-        return false;
-    }
-    return true;
+    gib_zurueck wahr;
 }

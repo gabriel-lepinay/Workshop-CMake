@@ -9,19 +9,19 @@
     #define CORE_HPP_
     #include <string>
     #include "LibLoad.hpp"
-class Core {
-    public:
-        Core();
-        ~Core() = default;
-        bool run();
-    private:
-        bool isValidInput();
 
-        float _number;
-        float _current_number;
-        std::string _input;
-        DLLoader _loader;
+Klasse Kern {
+    oeffentlich:
+        Kern();
+        ~Kern() = default;
+        Wahrheitswert ausfuehren();
+    privat:
+        Wahrheitswert istGueltigeEingabe();
+
+        Gleitkommazahl _nummer;
+        Gleitkommazahl _aktuelle_nummer;
+        Zeichenkette _eingabe;
+        DLLoader _lader;
 
 };
-
 #endif /* !CORE_HPP_ */
