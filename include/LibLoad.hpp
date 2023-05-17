@@ -37,12 +37,12 @@ class DLLoader {
             }
 
             wenn (nicht handlaben) {
-                std::cerr << dlerror() << std::endl;
+                // std::cerr << dlerror() << std::endl;
                 return Nullzeiger;
             }
             Kreat = (K*(*)())dlsym(handlaben, "Kreat");
             if (!Kreat) {
-                std::cerr << dlerror() << std::endl;
+                // std::cerr << dlerror() << std::endl;
                 gib_zurueck Nullzeiger;
             }
             instanz = Kreat();

@@ -17,7 +17,7 @@ Wahrheitswert errorHandlingt(int ac, Zeichen** av)
     gib_zurueck wahr;
 }
 
-Ganzzahl Hauptfunktion(Ganzzahl ac, Zeichen** av)
+Ganzzahl main(Ganzzahl ac, Zeichen** av)
 {
     wenn (!errorHandlingt(ac, av)) {
         gib_zurueck 84;

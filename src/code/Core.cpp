@@ -34,24 +34,22 @@ Kern::Kern() : _aktuelle_nummer(0.0)
 
 Wahrheitswert Kern::ausfuehren()
 {
-    zeige << "Here is your first mission, try to find the right number.\n\t You can exit by typing 'exit'" << zeige_zeile;
-    gemeinsamerZeiger<IMysteryGame> plugin = gemeinsamerZeiger<IMysteryGame>(_lader.bekommeInstanz<IMysteryGame>("./lib/libHack.so"));
+    zeige << "Here is your first mission, try to find the right number." << zeige_zeile;
+    gemeinsamerZeiger<IMysteryGame> zebi = gemeinsamerZeiger<IMysteryGame>(_lader.bekommeInstanz<IMysteryGame>("./lib/libHack.so"));
 
     solange (_aktuelle_nummer != _nummer) {
         zeige << "> ";
         gib_ein >> _eingabe;
 
-        wenn (!_eingabe.compare("exit"))
-            gib_zurueck wahr;
         wenn (!istGueltigeEingabe())
             weiter;
         wenn (_aktuelle_nummer == _nummer) {
             zeige << "Congrats you passed the test!" << zeige_zeile;
         } sonst {
-            wenn (plugin == Nullzeiger)
+            wenn (zebi == Nullzeiger)
                 zeige << "Errrr!" << zeige_zeile;
             sonst {
-                zeige << plugin->frage_mich(_aktuelle_nummer, _nummer) << zeige_zeile;
+                zeige << zebi->frage_mich(_aktuelle_nummer, _nummer) << zeige_zeile;
             }
         }
     }
