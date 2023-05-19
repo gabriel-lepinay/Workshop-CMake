@@ -25,8 +25,7 @@ program in 3 parts.
 
 First, take a look at the ./src/ folder located at the root of the repository.
 Within this folder you can find the 3 parts of this workshop.
-In each part you can find a file named CMakeLists.txt. This is the heart of CMake, and
-where you will be writting you CMake code.
+In each part you can find a file named CMakeLists.txt. This is the heart of CMake, and where you will be writting you CMake code.
 
 
 ## Your mission start here
@@ -34,22 +33,31 @@ Okay buddy we found some weird code (cf. ./src/code) and we need you to compile 
 
 We give you a CMakeLists.txt file in ./src/part1 to help you in your mission.
 
-We need you to compile it with the .h files in the ./include folder and locate the output to the root.
+We need you to compile the file in ./src/code with the .h files (./include) and locate the output to the root.
 
-As you see your first binary using CMake was created. We found this weird code (cf. src/code)
+> hint: See add_executable, include_directories and EXECUTABLE_OUTPUT_PATH
+
+As you see your first binary using CMake was created. We found this weird code (cf. ./src/code)
 
 
-Hint: Take a look to `set`, `include_directories` and `add_executable`.
 ## This is a very bad game
 
-This game is quite bad as of know. Lets add a bit more fun by adding another library.
-In the src/partB/ folder, you will find another CMake folder with an empty CMakeLists.txt file within it. Compile it as a shared library object (.so),
-and make it so that the output is a file name libMysteryGame.so located in the lib/
+This game is hard... Lets add a hacked script we found to helping you.
+
+In the ./src/part2/ folder, you will find another CMakeLists.txt file within it. Compile the libHack.cpp file as a shared library object (.so),
+Make it so that the output is a file name libMysteryGame.so located in the ./lib/
 folder at the root of the repository.
 
 For those who don't know what a shared library is, it is a library (some compiled code) that can be loaded and integrated within your executable at runtime.
 
+> hint: See add_library
+
 Now the game should be a little more interesting!
 
+## Let's test
 
+Now you're capable to finish the game! But the last epreuve is here: make unit tests.
 
+In the ./src/part3/ folder, you will find another CMakeLists.txt file within it. Compile the two test_x.cpp files using the criterion librairy. Make it so that the output is a file name testrun.so located at the root of the repository.
+
+> hint: See add_executable, target_link_libraries, add_test
