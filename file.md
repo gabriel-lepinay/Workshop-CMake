@@ -18,6 +18,8 @@ CMake does have one inconvenient though, and it is that it generates a lot of fi
 that will pollute your repository. That is why it is a good habit to always put
 your CMake instructions within a subdirectory of your project.
 
+> [Cmake Documentation](https://cmake.org/cmake/help/latest/guide/tutorial/A%20Basic%20Starting%20Point.html)
+
 ## Your first steps
 
 This workshop will guide you through the compilation of a wonderful mystery game
@@ -58,6 +60,8 @@ Now the game should be a little more interesting!
 
 Now you're capable to finish the game! But the last epreuve is here: make unit tests.
 
-In the ./src/part3/ folder, you will find another CMakeLists.txt file within it. Compile the two test_x.cpp files using the criterion librairy. Make it so that the output is a file name testrun.so located at the root of the repository.
+In the ./src/part3/ folder, you will find another CMakeLists.txt file within it. Compile the two test_x.cpp files using the criterion librairy. Make it so that the output is a file name testrun located at the root of the repository.
 
 > hint: See add_executable, target_link_libraries, add_test
+
+Now you're able to continue on your own.. go make insane makefile architechtue for next project!!
