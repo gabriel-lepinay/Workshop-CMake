@@ -47,7 +47,7 @@ As you see your first binary using CMake was created.
 This game is hard... Lets add a hacked script we found to helping you.
 
 In the ./src/part2/ folder, you will find another CMakeLists.txt file within it. Compile the libHack.cpp file as a shared library object (.so),
-Make it so that the output is a file name libMysteryGame.so located in the ./lib/
+Make it so that the output is a file name libHack.so located in the ./lib/
 folder at the root of the repository.
 
 For those who don't know what a shared library is, it is a library (some compiled code) that can be loaded and integrated within your executable at runtime.
