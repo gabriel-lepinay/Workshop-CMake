@@ -39,7 +39,7 @@ We need you to compile the file in ./src/code with the .h files (./include) and 
 
 > hint: See add_executable, include_directories and EXECUTABLE_OUTPUT_PATH
 
-As you see your first binary using CMake was created. We found this weird code (cf. ./src/code)
+As you see your first binary using CMake was created.
 
 
 ## This is a very bad game
